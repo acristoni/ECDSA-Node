@@ -27,6 +27,7 @@ function Transfer({ address, setBalance, privateKey }) {
       const {
         data: { balance },
       } = await server.post(`send`, {
+        recipient,
         amount: parseInt(sendAmount),
         hashMessage,
         signature: signatureHex,
